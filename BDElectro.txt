@@ -1,0 +1,16 @@
+CREATE DATABASE BDVElectro;
+USE BDVElectro;
+
+CREATE TABLE CLIENTE(
+ID_CLI INT auto_increment primary KEY,
+DNI_CLI CHAR(8),
+NOM_CLI VARCHAR(40),
+FONO_CLI CHAR(9),
+CORREO_CLI VARCHAR(50),
+CLAVE_CLI VARCHAR(50)
+)engine='InnoDB' default charset=latin1;
+
+insert into CLIENTE values(null,"75097290","ALEX","933201764","A18104074@IDAT.EDU.PE",aes_encrypt('75097290','aes'));
+
+
+SELECT * FROM CLIENTE
